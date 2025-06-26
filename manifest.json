@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Fake News Checker",
+  "version": "1.0",
+  "description": "Analyzes webpages for potentially fake or suspicious content using a local AI backend.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": [
+    "http://localhost/*",
+    "http://127.0.0.1/*",
+    "<all_urls>"
+  ],
+  "action": {
+    "default_title": "Scan for Fake News",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

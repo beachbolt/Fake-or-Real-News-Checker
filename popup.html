@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Fake News Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 10px;
+      width: 300px;
+      background-color: #f8f8f8;
+      color: #222;
+    }
+    h1 {
+      font-size: 16px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0;
+      font-weight: bold;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #check {
+      background-color: #4CAF50;
+      color: white;
+    }
+    #highlight {
+      background-color: #2196F3;
+      color: white;
+    }
+    #disagree {
+      background-color: #f44336;
+      color: white;
+    }
+    .section {
+      margin-top: 10px;
+    }
+    .sentence {
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+    .confidence {
+      font-size: 11px;
+      color: gray;
+    }
+    .FAKE { color: red; }
+    .SUSPICIOUS { color: orange; }
+    .REAL { color: green; }
+    .link-list a {
+      display: block;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Fake News Checker</h1>
+  <button id="check">Analyze Page</button>
+  <button id="highlight" style="display:none;">Highlight Sentences</button>
+  <div id="summary" class="section"></div>
+  <div id="results" class="section"></div>
+  <div id="sources" class="section"></div>
+  <button id="disagree" style="display:none;">Disagree with Verdict</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>
